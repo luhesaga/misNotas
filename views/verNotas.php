@@ -9,6 +9,7 @@ session_start();
   <h2>Notas registradas</h2>
 
 <table>
+
 <tr>
   <th>Asignatura</th>
   <th>Nota 1</th>
@@ -18,6 +19,7 @@ session_start();
   <th>Nota 5</th>
   <th>Nota 6</th>
   <th>Defin.</th>
+  <th>Acciones<th>
 </tr>
 <?php
 foreach ($reg as $info) {
@@ -31,12 +33,13 @@ foreach ($reg as $info) {
   <td><?php echo $info->nota4; ?></td>
   <td><?php echo $info->nota5; ?></td>
   <td><?php echo $info->nota6; ?></td>
-  <td>3.8</td>
-
+  <td><?php echo $info->def; ?></td>
+  <td><a href="?vista=addnota">Agregar nota</a></td>
+  <?php
+  }
+  ?>
 </tr>
-<?php
-}
-?>
+
 
 </table>
 
